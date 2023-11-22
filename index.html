@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>西文國家入境觀光客人數比較</title>
+
+<style>
+	.highcharts-figure,
+.highcharts-data-table table {
+    min-width: 360px;
+    max-width: 800px;
+    margin: 1em auto;
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+</style>
+
+
+</head>
+<body>
+	
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+<figure class="highcharts-figure">
+    <div id="container"></div>
+    <p class="highcharts-description">
+        1.西班牙：
+        <br>
+2011年至2016年，西班牙的入境旅客數呈現增長趨勢，達到峰值。<br>
+2017年至2019年，入境旅客數相對穩定，保持在80萬以上。<br>
+2020年，由於全球COVID-19大流行，入境旅客數急劇下降。<br>
+2021年和2022年，入境旅客數有所回升，但仍低於過去幾年的平均水平。<br>
+<br>
+2.墨西哥：
+<br>
+墨西哥的入境旅客數自2011年以來持續增長，顯示出旅遊業的穩健增長。<br>
+在2019年達到新的高峰，但2020年受到COVID-19影響而下降。<br>
+2021年和2022年，墨西哥的入境旅客數恢復增長。<br>
+<br>
+3.哥倫比亞：
+<br>
+哥倫比亞的入境旅客數在2011年至2019年間穩步增加。<br>
+2020年受到COVID-19影響而下降，但在2021年和2022年顯示出快速回升。<br>
+<br>
+4.阿根廷：
+<br>
+阿根廷的入境旅客數在2011年至2019年間相對穩定，波動較小。<br>
+2020年受到COVID-19影響而下降，但在2021年和2022年出現明顯增長。<br>
+<br>
+5.秘魯：
+<br>
+秘魯的入境旅客數在2011年至2019年間呈現增長趨勢。<br>
+<br>
+<br>
+<br>
+2020年受到COVID-19影響而下降，但在2021年和2022年顯示出穩步回升。<br>
+需要注意的是，2020年的數據普遍受到全球COVID-19大流行的影響，因此顯示出異常的下降。2021年和2022年的回升可能是由於全球疫苗接種率提高和旅遊限制減少的影響。
+
+<p style="color:blue;text-align:center">Made by 觀光四A 410909690 謝佳蓉</p>
+    </p>
+</figure>
+
+<script type="text/javascript">
+	
+Highcharts.chart('container', {
+
+    title: {
+        text: '西文國家入境觀光客人數比較',
+        align: 'left'
+    },
+
+    subtitle: {
+        text: 'By Tourism Category. Source: <a href="https://www.unwto.org/tourism-data/global-and-regional-tourism-performance" target="_blank">UNWTO</a>.',
+        align: 'left'
+    },
+
+    yAxis: {
+        title: {
+            text: 'Number of Inboud Tourism'
+        }
+    },
+
+    xAxis: {
+        accessibility: {
+            rangeDescription: 'Range: 2011 to 2022'
+        }
+    },
+
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+
+    plotOptions: {
+        series: {
+            label: {
+                connectorAllowed: false
+            },
+            pointStart: 2011
+        }
+    },
+
+    series: [{
+        name: '西班牙',
+        data: [56.18,57.46,60.68,64.94,68.18,75.32,81.87,82.81,83.51,null,31.18,71.66]
+    }, {
+        name: '墨西哥',
+        data: [23.4,	23.4,	24.15,	29.35,	32.09,	35.08,	39.29,	41.31,	45.02,	24.82,	31.86,	38.33]
+    }, {
+        name: '哥倫比亞',
+        data: [2.04,	2.18,	2.29,	2.57,	3.1,	3.37,	3.71,	4.02,	4.17,	1.26,	2.16,	4.51]
+    }, {
+        name: '阿根廷',
+        data: [6.7,	6.5,	6.51,	7.71,	6.82,	6.67,	6.71,	6.94,	7.4,	2.09,	0.3,	3.89]
+    }, {
+        name: '秘魯',
+        data: [2.6,	2.85,	3.16,	3.22,	3.46,	3.74,	4.03,	4.42,	4.37,	null,	0.44,	2.01]
+    }],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    }
+
+});
+
+</script>
+</body>
+</html>
